@@ -36,7 +36,7 @@ import java.util.Map;
 public class GenerateImageSample {
   static String bytesBase64Encoded = "";
     public static void main(String[] args) throws IOException {
-      String projectId = "<<YOUR_PROJECT_ID>>";
+      String projectId = "fair-yew-457905-e9";
       String location = "us-central1";
       String prompt = "Generate a cartoon performing the following Yoga pose: Malasana, known as Garland Pose or Yogi Squat, is a deep squatting posture that offers numerous physical and energetic benefits To perform the pose, start with feet wider than hipwidth apart, toes slightly turned outwards As you bend your knees, lower your hips down between your legs, aiming to keep your heels on the floor; if your heels lift, support them with a blanket or mat The torso drops slightly forward as the upper arms come inside the knees, with elbows pressing gently against the inner thighs while you bring your palms together in prayer position at your heart center Lengthen your spine, lifting and extending the torso while keeping your shoulders relaxed, and draw the belly button towards the spine to engage the core The tailbone reaches down towards the earth, and the crown of the head reaches up The breathing pace is typically an exhale as you move into the squat, with smooth breaths throughout the hold, and a final exhale as you release the pose by bringing the fingertips to the floor and slowly straightening the legs into a forward fold The neck is relaxed, aligned with the spine.";
       generateImage(projectId, location, prompt);
