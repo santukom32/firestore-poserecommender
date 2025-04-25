@@ -93,11 +93,11 @@ import java.util.Base64;
 @Controller
 class Posecontroller {
 private static final String get_pose_by_id = "https://firestore.googleapis.com/v1beta1/";
-private static final String param_url = "projects/<<YOUR_PROJECT_ID>>/databases/(default)/documents/poses/";
-String project = "<<YOUR_PROJECT_ID>>";
+private static final String param_url = "projects/fair-yew-457905-e9/databases/(default)/documents/poses/";
+String project = "fair-yew-457905-e9";
 String location = "us-central1";
 private static final String queryString = "{\"structuredQuery\":{\"select\":{\"fields\":[{\"fieldPath\":\"name\"}]},\"from\":[{\"collectionId\":\"poses\"}]}}";
-private static final String runQuery = "projects/<<YOUR_PROJECT_ID>>/databases/(default)/documents:runQuery";
+private static final String runQuery = "projects/fair-yew-457905-e9/databases/(default)/documents:runQuery";
 RestTemplate restTemplate = new RestTemplate();
 
 
@@ -167,7 +167,7 @@ public String callPoseByIdContext(Pose pose){
     .toArray(); // Directly collect into double[]
     FirestoreOptions firestoreOptions =
     FirestoreOptions.getDefaultInstance().toBuilder()
-        .setProjectId("<<YOUR_PROJECT_ID>>")
+        .setProjectId("fair-yew-457905-e9")
         .setCredentials(GoogleCredentials.getApplicationDefault())
         .build();
     Firestore firestore = firestoreOptions.getService();
@@ -322,7 +322,7 @@ public String callGemini(Pose pose) {
     //nameString = nameString.toLowerCase();
     System.out.println("Generated response nameString: " + nameString);
     String prompt = "Tell me posture details about " + nameString + " with details like instructions, breathing pace (inhale or exhale or both), tummy position, spine position, upper back, lower back position, feet position, legs position, hands and palms position, neck and head position etc.  Your response should be 4 lines of text only and the last line should include the benefit of this pose with respect to wellness and human body.";
-    String apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=[YOUR_API_KEY]";
+    String apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=AIzaSyA2cjEhlhZe_A0C7lWmDDZABm-TGu5GaTs";
     Map<String, Object> requestBody = new HashMap<>();
     List<Map<String, Object>> contents = new ArrayList<>();
     List<Map<String, Object>> tools = new ArrayList<>();
@@ -402,7 +402,7 @@ public String callGeminiCreate(Pose pose) {
     //nameString = nameString.toLowerCase();
     System.out.println("Generated response nameString: " + nameString);
     String prompt = "Tell me posture details about " + nameString + " with details like instructions, breathing pace (inhale or exhale or both), tummy position, spine position, upper back, lower back position, feet position, legs position, hands and palms position, neck and head position etc.  Your response should be 4 lines of text only and the last line should include the benefit of this pose with respect to wellness and human body.";
-    String apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=[YOUR_API_KEY]";
+    String apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=AIzaSyA2cjEhlhZe_A0C7lWmDDZABm-TGu5GaTs";
     System.out.println("GEMINI: " + apiUrl);
     Map<String, Object> requestBody = new HashMap<>();
     List<Map<String, Object>> contents = new ArrayList<>();
