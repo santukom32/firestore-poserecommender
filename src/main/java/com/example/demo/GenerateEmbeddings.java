@@ -37,7 +37,7 @@ public class GenerateEmbeddings {
     // Details about text embedding request structure and supported models are available in:
     // https://cloud.google.com/vertex-ai/docs/generative-ai/embeddings/get-text-embeddings
     String endpoint = "us-central1-aiplatform.googleapis.com:443";
-    String project = "<<YOUR_PROJECT_ID>>";
+    String project = "fair-yew-457905-e9";
     String model = "text-embedding-005";
     predictTextEmbeddings("Yoga pose for spine correction");
   }
