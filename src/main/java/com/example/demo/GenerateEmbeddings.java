@@ -46,7 +46,7 @@ public class GenerateEmbeddings {
   public static List<Double> predictTextEmbeddings(String text) throws IOException{
 
     String endpoint = "us-central1-aiplatform.googleapis.com:443";
-    String project = "<<YOUR_PROJECT_ID>>";
+    String project = "fair-yew-457905-e9";
     String model = "text-embedding-005";
     String task = "SEMANTIC_SIMILARITY";
     OptionalInt outputDimensionality = OptionalInt.of(768);
